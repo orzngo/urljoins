@@ -1,10 +1,14 @@
 {
-  "name": "urljoin-slash",
+  "name": "urljoins",
   "version": "0.0.1",
-  "description": "urljoin with trailing_slash support",
+  "description": "Trailing-Slash compatible urljoin",
   "main": "dist/urljoins.js",
   "module": "dist/esm/urljoins.js",
   "types": "dist/esm/urljoins.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orzngo/urljoins"
+  },
   "bin": {
     "hello": "dist/bin/index.js"
   },
@@ -18,7 +22,7 @@
   "files": [
     "dist"
   ],
-  "author": "",
+  "author": "orzngo",
   "license": "ISC",
   "devDependencies": {
     "@jest/types": "^27.5.1",

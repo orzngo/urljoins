@@ -2,6 +2,27 @@
 
 Trailing-Slash compatible join utility.
 
+# Install
+
+```bash
+npm i urljoins
+```
+
+
+# Usage
+```typescript
+import {urljoins} from "urljoins";
+
+console.log(urljoins("a.test/", "/a", "b")); // a.test/a/b
+```
+
+Try on https://npm.runkit.com/urljoins
+```javascript
+var urljoins = require("urljoins").urljoins;
+
+console.log(urljoins("a.test", {key1: "v1", key2: "v2"})); // a.test?key1=v1&key2=v2
+```
+
 
 # Feature
 
@@ -15,9 +36,10 @@ urljoins("a.test/", "/a", "b"); // a.test/a/b
 Spread key-value objects.
 
 ```typescript
-urljoins("a.test", {key1: v1, key2: v2}); // a.test?key1=v1&key2=v2
-urljoins("a.test", {key1: v1, key2: undefined, key3:v3}); // a.test?key1=v1&key2=&key3=v3
-urljoins("a.test", {key1: v1, key2: v2}, "/a"); // a.test?key1=v1&key2=v2&/a
+urljoins("a.test", {key1: "v1", key2: "v2"}); // a.test?key1=v1&key2=v2
+urljoins("a.test", {key1: "v1", key2: undefined, key3:"v3"}); // a.test?key1=v1&key2=&key3=v3
+urljoins("a.test", {key1: "v1", key2: null, key3:"v3"}); // same as undefined value
+urljoins("a.test", {key1: "v1", key2: "v2"}, "/a"); // a.test?key1=v1&key2=v2&/a
 urljoins("a.test", {keys: ["v1", "v2"]}); // a.test?keys[]=v1&keys[]=v2
 ```
 

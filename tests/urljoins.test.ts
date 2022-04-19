@@ -13,6 +13,8 @@ describe("urljoins", () => {
         expect(urljoins("t.test/", "aa", "bb")).toBe("t.test/aa/bb");
         expect(urljoins("t.test/", "aa", "/bb")).toBe("t.test/aa/bb");
         expect(urljoins("t.test/", "/aa", "/bb")).toBe("t.test/aa/bb");
+        expect(urljoins("t.test/", "/aa/", "/bb")).toBe("t.test/aa/bb");
+        expect(urljoins("t.test/", "/aa/", "/bb/")).toBe("t.test/aa/bb/");
     });
     describe("other trailing (or heading) treatments",()=>{
         test("url with query",()=>{

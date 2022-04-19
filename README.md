@@ -30,6 +30,8 @@ Trailing-Slash compatible.
 ```typescript
 urljoins("a.test", "/a", "b"); // a.test/a/b
 urljoins("a.test/", "/a", "b", "c"); // a.test/a/b/c
+urljoins("a.test/", "/a/", "/b"); // a.test/a/b
+urljoins("a.test/", "/a/", "/b/"); // a.test/a/b/
 ```
 
 Spread key-value objects.
